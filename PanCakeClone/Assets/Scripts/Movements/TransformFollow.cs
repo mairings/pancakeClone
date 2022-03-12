@@ -11,16 +11,10 @@ public class TransformFollow : MonoBehaviour
     public GameObject Plate;
     public Transform TransformLink;
 
-    float _kat;
-
-    private void Start()
-    {
-        _kat = Plate.GetComponent<Collect>().Kat;
-
-    }
+    
     void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(TransformLink.position.x, _kat, TransformLink.position.z), 30f * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(TransformLink.position.x, TransformLink.position.y + 0.1f, TransformLink.position.z), 30f * Time.deltaTime);
     }
 
 }

@@ -32,7 +32,7 @@ namespace PanCake.Controllers
         {
             OnClickDown += GetMouseDown;
             OnClick += GetMouse;
-            OnClickUp += GetMouseUp;            
+            OnClickUp += GetMouseUp;  
         }
         private void Update()
         {
