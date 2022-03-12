@@ -1,41 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-namespace PanCake.Controller
+namespace PanCake.Controllers
 {
     public class CharacterController : MonoBehaviour
     {
+        private static CharacterController _instance = null;
+        public static CharacterController Instance => _instance;
+
         [SerializeField] [Range(0, 10)] float _forwardSpeed;
 
         public delegate void OnClicked();
-        public event OnClicked onClickDown;
-        public event OnClicked onClick;
-        public event OnClicked onClickUp;
+        public event OnClicked OnClickDown;
+        public event OnClicked OnClick;
+        public event OnClicked OnClickUp;
+
 
 
         Vector2 pos1, pos2, delta;
+
         
+
+        private void Awake()
+        {
+            _instance = this;
+        }
 
         private void Start()
         {
-            onClickDown += GetMouseDown;
-            onClick += GetMouse;
-            onClickUp += GetMouseUp;
+            OnClickDown += GetMouseDown;
+            OnClick += GetMouse;
+            OnClickUp += GetMouseUp;            
         }
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
-                onClickDown();
+                OnClickDown();
             }
             else if (Input.GetMouseButton(0))
             {
-                onClick();
+                OnClick();
             }
             else if (Input.GetMouseButtonUp(0))
             {
-                onClickUp();
+                OnClickUp();
             }
         }
 
@@ -55,6 +66,7 @@ namespace PanCake.Controller
         {
 
         }
+
 
 
 
