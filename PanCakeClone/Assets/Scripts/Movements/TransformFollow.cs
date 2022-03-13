@@ -7,7 +7,6 @@ public class TransformFollow : MonoBehaviour
 {
     public GameObject Plate;
     public Transform TransformLink;
-
     
     void LateUpdate()
     {

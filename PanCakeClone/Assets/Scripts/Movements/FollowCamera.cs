@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PanCake.Controllers;
 using System;
+using PanCake.Abstract.Movements;
 
 namespace PanCake.Movements
 {
@@ -15,5 +16,7 @@ namespace PanCake.Movements
         {
             transform.position = Vector3.Lerp(transform.position, _target.position, _smooth * Time.deltaTime);
         }
+
+
     }
 }
