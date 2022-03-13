@@ -5,9 +5,6 @@ using System.Linq;
 using System;
 public class TransformFollow : MonoBehaviour
 {
-    //public event Action<float> GetTransformLink;
-
-    int _indexPlate;
     public GameObject Plate;
     public Transform TransformLink;
 

@@ -15,7 +15,5 @@ namespace PanCake.Movements
         {
             transform.position = Vector3.Lerp(transform.position, _target.position, _smooth * Time.deltaTime);
         }
-
-
     }
 }

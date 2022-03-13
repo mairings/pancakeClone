@@ -17,11 +17,7 @@ namespace PanCake.Controllers
         public event OnClicked OnClick;
         public event OnClicked OnClickUp;
 
-
-
         Vector2 pos1, pos2, delta;
-
-        
 
         private void Awake()
         {

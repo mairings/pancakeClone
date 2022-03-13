@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Obstacle
+  - Door
   layers:
   - Default
   - TransparentFX
