@@ -25,7 +25,7 @@ namespace PanCake.Managers
             Time.timeScale = 1;
         }
 
-        void LoadScene(string sceneName)
+        public void LoadScene(string sceneName)
         {
             SceneManager.LoadSceneAsync(sceneName);
         }

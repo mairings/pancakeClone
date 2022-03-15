@@ -7,7 +7,6 @@ namespace PanCake.Abstract.Movements.Obstacles
     public interface IRotate
     {
         void RotateTick(Transform transform, Vector3 direction);
-
     }
 
 }

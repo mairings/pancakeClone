@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using PanCake.Abstract.Movements;
 
 namespace PanCake.Controllers
 {
@@ -56,13 +55,16 @@ namespace PanCake.Controllers
             pos2 = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
             
             delta = pos1 - pos2;
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -0.7f, 0.7f), transform.position.y, transform.position.z);
-            transform.Translate(-delta.x * 10f * Time.deltaTime, 0, _forwardSpeed * Time.deltaTime);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -0.7f,0.7f),transform.position.y,transform.position.z);
+            transform.Translate(-delta.x*10f*Time.deltaTime, 0, _forwardSpeed * Time.deltaTime);
         }
         void GetMouseUp()
         {
 
         }
+
+
+
 
     }
 }
